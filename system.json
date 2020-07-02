@@ -1,0 +1,38 @@
+{
+ "name": "anima",
+ "title": "Anima: Beyond Fantasy",
+ "description": "A game system for Foundry VTT based on the Anima: Beyond Fantasy roleplaying game",
+ "version": 0.01,
+ "author": "Calgori, Mario, DarknesSeeker, Guote",
+ "scripts":[],
+ "esmodules": ["anima.js"],
+ "styles":["anima.css"],
+ "packs":[
+ {
+	{
+	"name": "heroes"
+	"label": "Starter Heroes",
+	"system": "anima",
+	"path": "./packs/heroes.db",
+	"entity": "Actor"
+	},
+	{
+	"name": "foes",
+	"label": "Foes and Monsters",
+	"system": "anima",
+	"path": "./packs/foes.db"
+	"entity": "Actor"	
+	}
+ }
+ ],
+ "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "initiative": "1d100 + @abilities.init.value
+  "gridDistance": 1,
+  "gridUnits": "mtrs",
+}
