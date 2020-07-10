@@ -1,0 +1,231 @@
+{
+	"Actor":{
+		"types":["character","npc"],
+		"templates":{
+			"common":{
+				"characteristics":{
+					"agi":{
+						"value": 0,
+						"bonus": 0
+					},
+					"con":{
+						"value": 0,
+						"bonus": 0
+					},
+					"des":{
+						"value": 0,
+						"bonus": 0
+					},
+					"fue":{
+						"value": 0,
+						"bonus": 0
+					},
+					"int":{
+						"value": 0,
+						"bonus": 0
+					},
+					"per":{
+						"value": 0,
+						"bonus": 0
+					},
+					"pod":{
+						"value": 0,
+						"bonus": 0
+					},
+					"vol":{
+						"value": 0,
+						"bonus": 0
+					}
+				},
+				"attrributes":{
+					"class":{
+						"value":""
+					},
+					"health":{
+						"value": 10,
+						"min": 0,
+						"max": 10,
+						"temp": 0,
+						"tempmax": 0
+					},
+					"turn":{
+						"value": 0,
+						"bonus": 0
+					},
+					"movement":{
+						"value": 0
+					}
+				},
+				"secundaries":{
+					"athletics":{
+						"acrobacias":{
+							"value": 0
+						},
+						"atletismo":{
+							"value": 0
+						},
+						"montar":{
+							"value": 0
+						},
+						"nadar":{
+							"value": 0
+						},
+						"trepar":{
+							"value": 0
+						},
+						"saltar":{
+							"value": 0
+						},
+						"pilotar":{
+							"value": 0
+						}
+					},
+					"socials":{
+						"estilo":{
+							"value": 0
+						},
+						"intimidar":{
+							"value": 0
+						},
+						"liderazgo":{
+							"value": 0
+						},
+						"persuasion":{
+							"value": 0
+						},
+						"comercio":{
+							"value": 0
+						},
+						"callejeo":{
+							"value": 0
+						},
+						"etiqueta":{
+							"value": 0
+						}
+					},
+					"perception":{
+						"advertir":{
+							"value": 0
+						},
+						"buscar":{
+							"value": 0
+						},
+						"rastrear":{
+							"value": 0
+						}
+					},
+					"intelectuals":{
+						"animales":{
+							"value": 0
+						},
+						"ciencia":{
+							"value": 0
+						},
+						"ley":{
+							"value": 0
+						},
+						"herbolaria":{
+							"value": 0
+						},
+						"historia":{
+							"value": 0
+						},
+						"tactica":{
+							"value": 0
+						},
+						"medicina":{
+							"value": 0
+						},
+						"memorizar":{
+							"value": 0
+						},
+						"navegacion":{
+							"value": 0
+						},
+						"ocultismo":{
+							"value": 0
+						},
+						"tasacion":{
+							"value": 0
+						},
+						"valoracion magica":{
+							"value": 0
+						}
+					},
+					"energy":{
+						"frialdad":{
+							"value": 0
+						},
+						"proezas de fuerza":{
+							"value": 0
+						},
+						"resistencia a dolor":{
+							"value": 0
+						}
+					},
+					"subterfuge":{
+						"cerrajeria":{
+							"value": 0
+						},
+						"disfraz":{
+							"value": 0
+						},
+						"ocultarse":{
+							"value": 0
+						},
+						"robo":{
+							"value": 0
+						},
+						"sigilo":{
+							"value": 0
+						},
+						"tramperia":{
+							"value": 0
+						},
+						"venenos":{
+							"value": 0
+						}
+					},
+					"creative":{
+						"arte":{
+							"value": 0
+						},
+						"baile":{
+							"value": 0
+						},
+						"forja":{
+							"value": 0
+						},
+						"runas":{
+							"value": 0
+						},
+						"alquimia":{
+							"value": 0
+						},
+						"animismo":{
+							"value": 0
+						},
+						"musica":{
+							"value": 0
+						},
+						"truco de manos":{
+							"value": 0
+						},
+						"caligrafia ritual":{
+							"value": 0
+						},
+						"orfebreria":{
+							"value": 0
+						},
+						"confeccion":{
+							"value": 0
+						},
+						"confec. marionetas":{
+							"value": 0
+						}
+					}
+				}
+			}
+		}
+	}
+}
