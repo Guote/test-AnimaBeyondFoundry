@@ -37,7 +37,7 @@
 						"bonus": 0
 					}
 				},
-				"attrributes":{
+				"attributes":{
 					"class":{
 						"value":""
 					},
@@ -226,6 +226,12 @@
 					}
 				}
 			}
+		},
+		"character":{
+			"templates":["characteristics","attributes","secundaries"]
+		},
+		"npc":{
+			"templates":["characteristics","attributes","secundaries"]
 		}
 	},
 	"Item":{
