@@ -156,10 +156,10 @@
 						"frialdad":{
 							"value": 0
 						},
-						"proezas de fuerza":{
+						"prDefuerza":{
 							"value": 0
 						},
-						"resistencia a dolor":{
+						"resADolor":{
 							"value": 0
 						}
 					},
@@ -208,10 +208,10 @@
 						"musica":{
 							"value": 0
 						},
-						"truco de manos":{
+						"trDeManos":{
 							"value": 0
 						},
-						"caligrafia ritual":{
+						"caligrafiaRitual":{
 							"value": 0
 						},
 						"orfebreria":{
@@ -220,12 +220,112 @@
 						"confeccion":{
 							"value": 0
 						},
-						"confec. marionetas":{
+						"confecMarionetas":{
 							"value": 0
 						}
 					}
 				}
 			}
+		}
+	},
+	"Item":{
+		"types": [
+			"weapon",
+			"armour",
+			"spell"
+		],
+		"templates":{
+			"physicalitem":{
+				"quantity": 0,
+				"price": 0,
+				"weight": 0,
+				"rarity": "",
+			},
+			"description":{
+				"value": ""
+		},
+		"weapon":{
+			"templates": ["physicalitem","description"],
+			"damage":{
+				"type": "String",
+				"label": "Damage",
+				"value": "",
+			},
+			"twohanded":{
+				"type": "boolean",
+				"label": "Two-handed",
+				"value": false
+			},
+			"weaponGroup":{
+				"type": "String",
+				"label": "Weapon Group",
+				"value": ""
+			},
+			"equipped": false
+		},
+		"armour":{
+			"templates": ["physicalitem","description"],
+			"armorType": {
+				"type": "String",
+				"label": "Armour Type",
+				"value": ""
+			},
+			"ta":{
+				"fil":{
+					"type": "String",
+					"label": "FIL",
+					"value": ""
+				},
+				"con":{
+					"type": "String",
+					"label": "CON",
+					"value": ""
+				},
+				"pen":{
+					"type": "String",
+					"label": "PEN",
+					"value": ""
+				},
+				"cal":{
+					"type": "String",
+					"label": "CAL",
+					"value": ""
+				},
+				"ele":{
+					"type": "String",
+					"label": "ELE",
+					"value": ""
+				},
+				"fri":{
+					"type": "String",
+					"label": "FRI",
+					"value": ""
+				},
+				"ene":{
+					"type": "String",
+					"label": "ENE",
+					"value": ""
+				}
+			},
+			"twohanded":{
+				"type": "boolean",
+				"label": "Two-handed",
+				"value": false
+			},
+			"weaponGroup":{
+				"type": "String",
+				"label": "Weapon Group",
+				"value": ""
+			},
+			"equipped": false
+		},
+		"spell":{
+			"templates":["description"],
+			"zeonCost":{
+				"type": "String",
+				"label": "Zeon cost",
+				"value": 0
+			},
 		}
 	}
 }
