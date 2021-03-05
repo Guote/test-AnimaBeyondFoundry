@@ -1,11 +1,11 @@
-export default class ABFActorSheet extends ActorSheet {
+export default class abfActorSheet extends ActorSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["abf", "sheet", "actor"], 
       template: "systems/abf/templates/actor-sheet.html",
       width: 600,
-      height: 800,
+      height: 700,
     });
   } 
 
@@ -59,7 +59,7 @@ export default class ABFActorSheet extends ActorSheet {
       result: (...)
       total: (...)
       __proto__: Object */
-
+    
       let openRange = 90;
       if (roll.results[0]>=openRange) {
         /* Initialize an accumulatedRoll object, since we'll be reusing "roll" */
@@ -74,23 +74,23 @@ export default class ABFActorSheet extends ActorSheet {
           roll.evaluate();
 
           /* Now we add the new roll data to the template.*/
-          accRoll.results[0] += roll.results[0]
-          accRoll._total += roll._total
-          let newResult = {result: roll.results[0], active: true, exploded: roll.results[0]>= nextOpenRange }
-          accRoll.terms[0].results.push(newResult)
+          accRoll.results[0] += roll.results[0];
+          accRoll._total += roll._total;
+          let newResult = {result: roll.results[0], active: true, exploded: roll.results[0]>= nextOpenRange };
+          accRoll.terms[0].results.push(newResult);
 
-          openRange = nextOpenRange
+          openRange = nextOpenRange;
          }
          /* Once we leave the while loop, we rename accRoll to roll again,
          as if nothing was changed. */
-         roll = accRoll
+         roll = accRoll;
       }
 
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label
-      })
+      });
 
-    }
-  }
-}
+    };
+  };
+};

@@ -1,7 +1,6 @@
 {
     "Actor":{
         "types": ["character"],
-        "monster":{},
         "character": {
             "recursos": {
                 "pv": {
@@ -32,13 +31,7 @@
                 "ha": {
                     "value": 0
                 },
-                "danoBase": {
-                    "value": 0
-                },
                 "hd": {
-                    "value": 0
-                },
-                "ta": {
                     "value": 0
                 },
                 "proyMag": {
