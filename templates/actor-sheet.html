@@ -1,0 +1,124 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+        </div>
+    </header>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div>
+            RECURSOS
+            {{#each data.recursos as |rec key|}}
+                <div class="resource-content flexrow flex-center flex-between">
+                    <label for="data.recursos.{{key}}.value" class="resource-label">{{key}}</label>
+                    <input type="text" name="data.recursos.{{key}}.value" value="{{rec.value}}" data-dtype="Number"/>
+                    <span>/</span>
+                    <input type="text" name="data.recursos.{{key}}.max" value="{{rec.max}}"  data-dtype="Number"/>
+                </div>
+            {{/each}}
+
+            {{!-- Recursos sin el each por si acaso porque soy un puto manco --}}
+            <div>
+                {{!-- <div class="resource flex-group-center">
+                    <label for="data.recursos.pv.value" class="resource-label">Puntos de Vida</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.recursos.pv.value" value="{{data.recursos.pv.value}}" data-dtype="Number">
+                        <span> / </span>
+                        <input type="text" name="data.recursos.pv.max" value="{{data.recursos.pv.max}}" data-dtype="Number">
+                    </div>
+                </div>
+                <div class="resource flex-group-center">
+                    <label for="data.recursos.cansancio.value" class="resource-label">Cansancio</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.recursos.cansancio.value" value="{{data.recursos.cansancio.value}}" data-dtype="Number">
+                        <span> / </span>
+                        <input type="text" name="data.recursos.cansancio.max" value="{{data.recursos.cansancio.max}}" data-dtype="Number">
+                    </div>
+                </div>
+                <div class="resource flex-group-center">
+                    <label for="data.recursos.zeon.value" class="resource-label">Zeon</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.recursos.zeon.value" value="{{data.recursos.zeon.value}}" data-dtype="Number">
+                        <span> / </span>
+                        <input type="text" name="data.recursos.zeon.max" value="{{data.recursos.zeon.max}}" data-dtype="Number">
+                    </div>
+                </div>
+                <div class="resource flex-group-center">
+                    <label for="data.recursos.ki.value" class="resource-label">Ki</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.recursos.ki.value" value="{{data.recursos.ki.value}}" data-dtype="Number">
+                        <span> / </span>
+                        <input type="text" name="data.recursos.ki.max" value="{{data.recursos.ki.max}}" data-dtype="Number">
+                    </div>
+                </div>
+                <div class="resource flex-group-center">
+                    <label for="data.recursos.cv.value" class="resource-label">CV</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" name="data.recursos.cv.value" value="{{data.recursos.cv.value}}" data-dtype="Number">
+                        <span> / </span>
+                        <input type="text" name="data.recursos.cv.max" value="{{data.recursos.cv.max}}" data-dtype="Number">
+                    </div>
+                </div> --}}
+            </div>
+        
+        </div>
+
+        <div>
+            ATRIBUTOS
+            {{#each data.atributos as |atr key|}}
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.{{key}}.value" class="resource-label rollable" data-roll="1d100+@atributos.{{key}}.value" data-label="{{key}}">
+                        {{key}}
+                    </label>
+                    <input type="text" name="data.atributos.{{key}}.value" value="{{atr.value}}" data-dtype="Number"/>
+                </div>
+            {{/each}}                
+
+            {{!-- Atributos sin el each por si acaso porque soy un puto manco --}}
+            <div>
+                {{!-- <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.turno" class="resource-label">Turno</label>
+                    <input type="text" name="data.atributos.turno" value="{{data.atributos.turno}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.ha" class="resource-label">ha</label>
+                    <input type="text" name="data.atributos.ha" value="{{data.atributos.ha}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.danoBase" class="resource-label">danoBase</label>
+                    <input type="text" name="data.atributos.danoBase" value="{{data.atributos.danoBase}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.hd" class="resource-label">hd</label>
+                    <input type="text" name="data.atributos.hd" value="{{data.atributos.hd}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.ta" class="resource-label">ta</label>
+                    <input type="text" name="data.atributos.ta" value="{{data.atributos.ta}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.proyMag" class="resource-label">proyMag</label>
+                    <input type="text" name="data.atributos.proyMag" value="{{data.atributos.proyMag}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.proyPsi" class="resource-label">proyPsi</label>
+                    <input type="text" name="data.atributos.proyPsi" value="{{data.atributos.proyPsi}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.potencialPsi" class="resource-label">potencialPsi</label>
+                    <input type="text" name="data.atributos.potencialPsi" value="{{data.atributos.potencialPsi}}" data-dtype="Number">
+                </div>
+                <div class="ability flexrow flex-group-center">
+                    <label for="data.atributos.convocar" class="resource-label">convocar</label>
+                    <input type="text" name="data.atributos.convocar" value="{{data.atributos.convocar}}" data-dtype="Number">
+                </div> --}}
+            </div>
+
+        </div>
+
+    </section>
+</form>

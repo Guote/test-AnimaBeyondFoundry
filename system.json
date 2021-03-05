@@ -1,29 +1,17 @@
 {
-  "name": "animabeyondfantasy",
-  "title": "Anima Beyond Fantasy",
-  "description": "The Anima Beyond Fantasy system for FoundryVTT!",
-  "version": "1.0.0",
-  "minimumCoreVersion": "0.7.5",
-  "compatibleCoreVersion": "0.7.9",
-  "templateVersion": 2,
-  "author": "Calgori, Mario, DarknesSeeker, Guote",
-  "esmodules": ["module/animabeyondfantasy.js"],
-  "styles": ["css/animabeyondfantasy.css"],
-  "scripts": [],
-  "packs": [],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "",
-  "download": "",
-  "license": "LICENSE.txt"
-}
+    "name": "abf",
+    "title": "abf",
+    "description": "System building from scratch",
+    "author": "musha ente",
+    "version": 0.01,
+    "minimumCoreVersion": "0.7.5",
+    "compatibleCoreVersion": "0.7.9",
+    
+    "esmodules": ["module/abf.js"],
+    "styles": ["styles/abf.css"],
+    "packs": [],
+    "languages": [
+    ]
+    
+  }
+  
