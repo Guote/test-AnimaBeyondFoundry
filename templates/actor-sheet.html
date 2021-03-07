@@ -71,7 +71,7 @@
             ATRIBUTOS
             {{#each data.atributos as |atr key|}}
                 <div class="ability flexrow flex-group-center">
-                    <label for="data.atributos.{{key}}.value" class="resource-label rollable" data-roll="1d100xo>90+@atributos.{{key}}.value" data-label="{{key}}">
+                    <label for="data.atributos.{{key}}.value" class="resource-label rollable" data-roll="1d100xa+@atributos.{{key}}.value" data-label="{{key}}">
                         {{key}}
                     </label>
                     <input type="text" name="data.atributos.{{key}}.value" value="{{atr.value}}" data-dtype="Number"/>

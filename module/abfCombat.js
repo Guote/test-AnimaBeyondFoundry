@@ -1,4 +1,6 @@
 export default class abfCombat extends Combat {
+
+  /* Override nextRound method so that it resets initiative */
     async nextRound() {
         let turn = 0;
         if ( this.settings.skipDefeated ) {
