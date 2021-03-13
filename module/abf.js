@@ -1,8 +1,7 @@
 // Import Modules
 import abfActorSheet from "./abfActorSheet.js";
 import abfItemSheet from "./abfItemSheet.js";
-import abfCombat from "./abfCombat.js";
-import abfRoll from "./abfRoll.js";
+import abfCombat from "./Combat.js";
 
 Hooks.once('init', function() {
 
@@ -19,11 +18,11 @@ Hooks.once('init', function() {
 
   /* Define a new entry in the game global variable with all the custom stuff 
   so that other methods can access it from anywhere */
-  game.abf = {
+/*   game.abf = {
     abfRoll
-  }
+  } */
 
   // Define custom Roll class
-  CONFIG.Dice.rolls.unshift(abfRoll);
-
+/*   CONFIG.Dice.rolls.unshift(abfRoll);
+ */
 })

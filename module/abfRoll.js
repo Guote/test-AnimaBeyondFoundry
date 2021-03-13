@@ -1,5 +1,12 @@
 export default class abfRoll extends Roll {
 
+    /* this.results.push("+")
+    this.results.push(mod)
+    this.terms.push("+")
+    this.terms.push(mod)
+    this._formula += ` + ${mod}`
+    this._total = String(Number(this._total)+Number(mod)); */
+
   customAbfRolls(formula){
     let canExplode = formula.includes("xa");
     let isTurno = formula.includes("Turno");
@@ -68,6 +75,24 @@ export default class abfRoll extends Roll {
   // Overwrite just to include the abf roll keywords
   evaluate({minimize=false, maximize=false}={}) {
     if ( this._rolled ) throw new Error("This Roll object has already been rolled.");
+
+    // Step 0 - 
+    new Dialog({
+      content: `
+      <form>
+      <div class="form-group">
+        <label>Modificador</label>
+        <input id="mod" type="text" name="mod" value="0" placeholder="0"/>
+      </div>
+      </form>`,
+      buttons: {
+        submit: { label: "Submit", callback: (html) => {
+          const results = (new FormDataExtended(html.find("form")[0])).toObject();
+          console.log(`Hello, ${results.mod}`); // 
+        }}
+      },
+      default: "submit",
+    }).render(true);
 
     // Step 1 - evaluate any inner Rolls and recompile the formula
     let hasInner = false;
